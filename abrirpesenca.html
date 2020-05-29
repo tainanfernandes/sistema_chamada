@@ -18,7 +18,7 @@
     <!-- Principal CSS da Estrutura padrão -->
     <link rel="stylesheet" href="css/index.css">
     <!-- Principal CSS da Tela -->
-    <link rel="stylesheet" href="css/listaonline.css">
+    <link rel="stylesheet" href="css/abrirpresenca.css">
    
   </head>
 
@@ -59,83 +59,72 @@
   <!-- CORPO DA TELA-->
   <body>
     <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-6">Escolha uma turma para iniciar a Chamada!</h1>
-        </div>
+      <div class="container">
+        <h1 class="display-6">Chamada Aberta</h1>
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="button-finalizar"><a href="">Finalizar Chamada</a></button>
       </div>
-
-      <!-- Nessa parte está uma tabela com todas as turmas do professor, onde ele deverá clicar no botão de alguma pra abrir chamada-->
-      <div class="lista-online">
+    </div>
+    <!-- Nessa parte está mostrando o PIN que os alunos irão utilizar para comprovar presença e total dos que estão presente e ausentes-->
+    <div id="campos">
+      <form>
+        <div class="row">
+          <div class="col">
+            <label for="inputpresente"><b>Alunos Presentes</b></label>
+            <input type="number" class="form-control" placeholder="25" id="disabledInput" class="presente" disabled>
+          </div>
+          <div class="col">
+            <label for="inputpin"><b>PIN</b></label>
+            <input type="number" class="form-control" placeholder="8965321475" id="disabledInput" class="pin" disabled>
+          </div>
+          <div class="col">
+            <label for="inputausente"><b>Alunos Ausentes</b></label>
+            <input type="number" class="form-control" placeholder="18" id="disabledInput" class="ausente" disabled>
+          </div>
+        </div>
+      </form>
+      <!-- Nessa parte é uma tabela, que vai atualizando conforme os alunos forem confirmando a presença. Tem o slogan do TechLab que poderá futuramente ser substituido pelo qrcode-->
+     <div>
+      <img src="img/lab-preto.png" width="300" height="300" class="d-inline-block align-top" alt="" id="img">
         <div class="table-responsive">
-          <table class="table">
+          <table class="table table-striped" id="table-presenca">
             <thead>
               <tr>
-                <th scope="col"><b>Dia da Semana</b></th>
-                <th scope="col"><b>Disciplina</b></th>
-                <th scope="col"><b>Turno</b></th>
-                <th scope="col"><b>Abrir Presença</b></th>
+                <th scope="col"><b>Alunos com Presença Confirmada</b></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Segunda-feira</td>
-                <td>Algoritmo e Estrutura de Dados</td>
-                <td>Noite</td>
-                <th scope="row"><button class="btn btn-outline-dark my-2 my-sm-0"><a href="abrirpesenca.html" >Chamada</a></button></th>
+                <td>Maria Paula Da Silva</td>
               </tr>
               <tr>
-                <td>Segunda-Feira</td>
-                <td>Sistemas Distribuidos</td>
-                <td>Noite</td>
-                <th scope="row"><button class="btn btn-outline-dark my-2 my-sm-0"><a href="abrirpesenca.html" >Chamada</a></button></th>
+                <td>João Pereira</td>
               </tr>
               <tr>
-                <td>Sexta-Feira</td>
-                <td>Sistemas Operacionais</td>
-                <td>Manhã</td>
-                <th scope="row"><button class="btn btn-outline-dark my-2 my-sm-0"><a href="abrirpesenca.html" >Chamada</a></button></th>
+                <td>Marcos dos santos</td>
               </tr>
               <tr>
-                <td>Segunda-feira</td>
-                <td>Algoritmo e Estrutura de Dados</td>
-                <td>Noite</td>
-                <th scope="row"><button class="btn btn-outline-dark my-2 my-sm-0"><a href="abrirpesenca.html" >Chamada</a></button></th>
+                <td>Antonio Carambolas</td>
               </tr>
               <tr>
-                <td>Segunda-Feira</td>
-                <td>Sistemas Distribuidos</td>
-                <td>Noite</td>
-                <th scope="row"><button class="btn btn-outline-dark my-2 my-sm-0"><a href="abrirpesenca.html" >Chamada</a></button></th>
+                <td>Paulo da silva</td>
               </tr>
               <tr>
-                <td>Sexta-Feira</td>
-                <td>Sistemas Operacionais</td>
-                <td>Manhã</td>
-                <th scope="row"><button class="btn btn-outline-dark my-2 my-sm-0"><a href="abrirpesenca.html" >Chamada</a></button></th>
+                <td>Lucas Oliveira</td>
               </tr>
               <tr>
-                <td>Segunda-feira</td>
-                <td>Algoritmo e Estrutura de Dados</td>
-                <td>Noite</td>
-                <th scope="row"><button class="btn btn-outline-dark my-2 my-sm-0"><a href="abrirpesenca.html" >Chamada</a></button></th>
+                <td>Ana catarina</td>
               </tr>
               <tr>
-                <td>Segunda-Feira</td>
-                <td>Sistemas Distribuidos</td>
-                <td>Noite</td>
-                <th scope="row"><button class="btn btn-outline-dark my-2 my-sm-0"><a href="abrirpesenca.html" >Chamada</a></button></th>
+                <td>Rita ritalina</td>
               </tr>
               <tr>
-                <td>Sexta-Feira</td>
-                <td>Sistemas Operacionais</td>
-                <td>Manhã</td>
-                <th scope="row"><button class="btn btn-outline-dark my-2 my-sm-0"><a href="abrirpesenca.html" >Chamada</a></button></th>
+                <td>Cansei de inventar nomes</td>
               </tr>
-              
             </tbody>
           </table>
         </div>
       </div>
+    </div>
   </body>
 
   <!--RODAPÉ DA TELA-->

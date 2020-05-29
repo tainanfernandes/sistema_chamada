@@ -1,0 +1,25 @@
+h1{
+    padding-top: 40px;
+}
+#user{
+    margin-top: 60px;
+    position: relative;
+    float: left;
+    margin-left: 100px;
+}
+.conteudo {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#formulario {
+    width: 800px;
+    margin-left: 400px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+
+}
+#editar{
+    background-color: #ffa500;
+    border-color: white;
+    
+}

@@ -1,0 +1,32 @@
+h1 {
+    margin-top: 40px;
+}
+.presente {
+    background-color: lightgreen;
+}
+.ausente {
+    background-color: tomato;
+}
+.pin{
+    width: 326px;
+    color: black;
+}
+#campos {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 40px;
+}
+.table-responsive {
+    position: relative;
+    float: right;
+    text-align: center;
+    margin-top: 60px;
+    width: 800px;
+    margin-bottom: 60px;
+}
+#button-finalizar {
+    float: right;
+}
+#img {
+    margin-top:80px;
+}
