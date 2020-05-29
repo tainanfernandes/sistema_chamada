@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Configuração Padrão-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Icone da Aba -->
+    <link rel="icon" href="img/lab-preto.png">
+    <!--Titulo da Aba-->
+    <title>Sistema de Chamadas</title>
+
+    <!-- CSS Reset-->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Principal CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Principal CSS da Estrutura padrão -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Principal CSS da Tela -->
+    <link rel="stylesheet" href="css/disciplina.css">
+   
+  </head>
+
+  <!-- CABEÇALHO-->
+  <header>
+    <!-- Barra de Navegação Padrão Professor-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="img/lab.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Sistema de Chamada
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav" id="item-ul">
+          <li class="nav-item">
+            <a class="nav-link" href="principalprof.html" id="item-li">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="listaonline.html" id="item-li">Abrir Presença</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cadastrarturma.html" id="item-li">Criar Turma</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Relatórios
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="relatoriodisciplina.html">Relatório Disciplina</a>
+              <a class="dropdown-item" href="relatoriodetalhado.html">Relatório Detalhado</a>
+            </div>
+          </li>
+        </ul>
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="button-sair">Sair</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CORPO DA TELA-->
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-6">Relatório da Disciplina <br> Algoritmo e Estrutura de Dados</h1>
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="button-detalhado"><a href="detalhado.html">Relatório Detalhado</a></button>
+      </div>
+    </div>
+
+    <!-- Nessa parte está mostrando o percentual de presença e os dias com mais e menos presença-->
+    <div class="disciplina">
+      <form>
+        <div class="row">
+          <div class="col">
+            <label for="inputpercentual"><b>Percentual de Presença</b></label>
+            <input type="number" class="form-control" placeholder="78%" id="disabledInput" disabled>
+          </div>
+          <div class="col">
+            <label for="inputpresenca"><b>Dia com maior Presença</b></label>
+            <input type="number" class="form-control" placeholder="14/02" id="disabledInput" disabled>
+          </div>
+          <div class="col">
+            <label for="inputausencia"><b>Dia com maior Ausência</b></label>
+            <input type="number" class="form-control" placeholder="25/09" id="disabledInput" disabled>
+          </div>
+        </div>
+      </form>
+       
+      <!-- Nessa parte são duas tabelas, uma com as 10 pessoas que mais faltaram e outra com as que mais estiveram presente-->
+        <div class="table-responsive">
+          <table class="table table-striped" id="table-ausencia">
+            <thead>
+              <tr>
+                <th scope="col"><b>Top 10 Ausências</b></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maria Paula Da Silva</td>
+              </tr>
+              <tr>
+                <td>João Pereira</td>
+              </tr>
+              <tr>
+                <td>Marcos dos santos</td>
+              </tr>
+              <tr>
+                <td>Antonio Carambolas</td>
+              </tr>
+              <tr>
+                <td>Paulo da silva</td>
+              </tr>
+              <tr>
+                <td>Lucas Oliveira</td>
+              </tr>
+              <tr>
+                <td>Ana catarina</td>
+              </tr>
+              <tr>
+                <td>Rita ritalina</td>
+              </tr>
+              <tr>
+                <td>Cansei de inventar nomes</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped" id="table-presenca">
+            <thead>
+              <tr>
+                <th scope="col"><b>Top 10 Presenças</b></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maria Paula Da Silva</td>
+              </tr>
+              <tr>
+                <td>João Pereira</td>
+              </tr>
+              <tr>
+                <td>Marcos dos santos</td>
+              </tr>
+              <tr>
+                <td>Antonio Carambolas</td>
+              </tr>
+              <tr>
+                <td>Paulo da silva</td>
+              </tr>
+              <tr>
+                <td>Lucas Oliveira</td>
+              </tr>
+              <tr>
+                <td>Ana catarina</td>
+              </tr>
+              <tr>
+                <td>Rita ritalina</td>
+              </tr>
+              <tr>
+                <td>Cansei de inventar nomes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+     
+  </body>
+
+  <!--RODAPÉ DA TELA-->
+  <footer class="footer mt-auto py-3">
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+      <a class="navbar-brand" id= "footer-a" href="#">Desenvolvido por TechLab</a>
+      <a>E-mail: Techlab@pitagorasraja.net.br</a>
+    </nav>
+  </footer>
+</html>

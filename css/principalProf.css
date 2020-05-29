@@ -1,0 +1,30 @@
+h1{
+    padding-top: 40px;
+}
+#frase{
+    font-size: 18px;
+}
+#turmas-collapse{
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 50px;
+}
+h2{
+    margin-left:71px;
+    margin-bottom:30px;
+}
+#disciplina-collapse{
+    color: black;
+}
+#button-chamada{
+    float: right;
+    position: relative;
+    bottom:15px;
+}
+#button-relatorio{
+    float: right;
+    margin-left: 20px;
+    margin-right: 10px;
+    position: relative;
+    bottom:15px;
+}

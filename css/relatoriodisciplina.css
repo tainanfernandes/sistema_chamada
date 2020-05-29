@@ -1,0 +1,13 @@
+.relatorio-disciplina {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 50px;
+}
+h1{
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+a:link {
+    color: black;
+    text-decoration: none;
+}

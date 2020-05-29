@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/lab-preto.png">
+
+    <title>Sistema de Chamada</title>
+
+    <!-- Principal CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- Estilos customizados para esse template -->
+    <link href="css/novousuario.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Formulário Onde o usuario poderá se cadastrar para ter acesso a uma conta-->
+    <form class="form-signin">
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
+        </div>
+      <div class="form-label-group">
+        <input type="nome" id="inputNome" class="form-control" placeholder="Nome" required autofocus>
+        <label for="inputNome">Nome</label>
+      </div>
+      <div class="form-label-group">
+        <input type="sobrenome" id="inputSobrenome" class="form-control" placeholder="Sobrenome" required>
+        <label for="inputSobrenome">Sobrenome</label>
+      </div>
+      <div class="form-label-group">
+        <input type="cpf" id="inputCpf" class="form-control" placeholder="CPF" required >
+        <label for="inputCpf">CPF</label>
+      </div>
+      <div class="form-label-group">
+        <input type="email" id="inputEmail" class="form-control" placeholder="Endereço de email" required >
+        <label for="inputEmail">Endereço de email</label>
+      </div>
+      <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+        <label for="inputPassword">Senha</label>
+      </div>
+      <div class="form-label-group">
+        <input type="password" id="inputSenha" class="form-control" placeholder="Confirmar Senha" required>
+        <label for="inputSenha">Confirmar Senha</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline" id="radio">
+        <input type="radio" id="customRadioInline1 " name="customRadioInline1" class="custom-control-input">
+        <label class="custom-control-label" for="customRadioInline1">Sou Professor</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline2 " name="customRadioInline1" class="custom-control-input">
+        <label class="custom-control-label" for="customRadioInline2">Sou aluno</label>
+      </div>
+      <div class="form-label-group">
+        <input type="RA" id="inputRa" class="form-control" placeholder="RA" required >
+        <label for="inputRa">RA</label>
+      </div>
+      <div class="form-label-group">
+        <input type="CódigoProfessor" id="inputCodigoProfessor" class="form-control" placeholder="Código Professor" required >
+        <label for="inputCodigoProfessor">Código Professor</label>
+      </div>
+
+      <!-- Rodapé-->
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; TechLab - 2020</p>
+    </form>
+
+  </body>
+</html>
