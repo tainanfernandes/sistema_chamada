@@ -5,26 +5,35 @@ h1{
     font-size: 18px;
 }
 #turmas-collapse{
-    margin-left: 70px;
-    margin-right: 70px;
     margin-bottom: 50px;
 }
 h2{
-    margin-left:71px;
     margin-bottom:30px;
 }
 #disciplina-collapse{
     color: black;
 }
-#button-chamada{
-    float: right;
-    position: relative;
-    bottom:15px;
+
+.buttons-disciplina {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
-#button-relatorio{
+
+.buttons-disciplina > div:first-child {
+    margin-bottom: 15px;
+    flex: 1 1 436px;
+    text-align: justify;
+}
+
+.buttons-disciplina > div:nth-child(2) {
+    flex: 0 1 212px;
+}
+
+.button-chamada{
+    float: right;
+}
+.button-relatorio{
     float: right;
     margin-left: 20px;
-    margin-right: 10px;
-    position: relative;
-    bottom:15px;
 }

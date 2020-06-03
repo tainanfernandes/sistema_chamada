@@ -1,7 +1,7 @@
 #button-sair{
     border-color: #ffa500;
     color:#ffa500;
-    margin-left: 450px;
+    margin-left: 1em;
 }
 #item-ul{
     margin-left: 120px;
@@ -15,4 +15,44 @@
 #frase{
     font-size: 18px;
 }
+#user-controls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+#user-controls-perfil {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+}
+#user-controls-perfil > span:nth-child(2) {
+    display: inline-block;
+    background-image: url("../img/user.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 2em;
+    width: 2em;
 
+    margin-top: -0.5em;
+    margin-bottom: -0.5em;
+    margin-right: 0.5em
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, pre, a, span, label, blockquote, address, big, cite, code {
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    #user-controls {
+        width: fit-content;
+        margin-left: auto;
+    }
+    #user-controls-perfil {
+        flex-flow: row;
+    }
+    #user-controls-perfil > span:nth-child(2) {
+        margin-left: 0.5em
+    }
+}
