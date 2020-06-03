@@ -30,7 +30,7 @@
         <img src="img/lab.png" width="30" height="30" class="d-inline-block align-top" alt="">
         Sistema de Chamada
       </a>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse flex-grow-1" id="navbarNavDropdown">
         <ul class="navbar-nav" id="item-ul">
           <li class="nav-item">
             <a class="nav-link" href="principalprof.html" id="item-li">Home</a>
@@ -41,11 +41,21 @@
           <li class="nav-item">
             <a class="nav-link" href="cadastrarturma.html" id="item-li">Criar Turma</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="relatorio.html" id="item-li">Relatórios</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Relatórios
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="relatoriodisciplina.html">Relatório Disciplina</a>
+              <a class="dropdown-item" href="relatoriodetalhado.html">Relatório Detalhado</a>
+            </div>
           </li>
         </ul>
+
+        <div id="user-controls">
+          <a id="user-controls-perfil" href="perfilprof.html"><span class="text-white">Perfil</span><span></span></a>
           <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="button-sair">Sair</button>
+        </div>
       </div>
     </nav>
   </header>
