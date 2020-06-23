@@ -1,0 +1,31 @@
+h1{
+    padding-top: 40px;
+}
+#frase{
+    font-size: 18px;
+}
+#turmas-collapse{
+    margin-bottom: 50px;
+}
+h2{
+    margin-bottom:30px;
+}
+#disciplina-collapse{
+    color: black;
+}
+
+.buttons-disciplina {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.button-chamada{
+    float: right;
+}
+.button-presenca{
+    position: relative;
+    float: right;
+    left: 600px;
+    top:10px;
+}
+
