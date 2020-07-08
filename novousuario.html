@@ -46,21 +46,21 @@
         <input type="password" id="inputSenha" class="form-control" placeholder="Confirmar Senha" required>
         <label for="inputSenha">Confirmar Senha</label>
       </div>
-      <div class="custom-control custom-radio custom-control-inline" id="radio">
-        <input type="radio" id="customRadioInline1 " name="customRadioInline1" class="custom-control-input">
-        <label class="custom-control-label" for="customRadioInline1">Sou Professor</label>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="radioProfessor" name="radioProfessorAluno" class="custom-control-input" value="0">
+        <label class="custom-control-label" for="radioProfessor">Sou Professor</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="customRadioInline2 " name="customRadioInline1" class="custom-control-input">
-        <label class="custom-control-label" for="customRadioInline2">Sou aluno</label>
+        <input type="radio" id="radioAluno" name="radioProfessorAluno" class="custom-control-input" value="1">
+        <label class="custom-control-label" for="radioAluno">Sou aluno</label>
       </div>
-      <div class="form-label-group">
-        <input type="RA" id="inputRa" class="form-control" placeholder="RA" required >
+      <div class="form-label-group d-none" id="inputRaWrap">
+        <input type="RA" id="inputRa" class="form-control" placeholder="RA" >
         <label for="inputRa">RA</label>
       </div>
-      <div class="form-label-group">
-        <input type="CódigoProfessor" id="inputCodigoProfessor" class="form-control" placeholder="Código Professor" required >
-        <label for="inputCodigoProfessor">Código Professor</label>
+      <div class="form-label-group d-none" id="inputCodProfessorWrap">
+        <input type="CódigoProfessor" id="inputCodProfessor" class="form-control" placeholder="Código Professor">
+        <label for="inputCodProfessor">Código Professor</label>
       </div>
 
       <!-- Rodapé-->
@@ -73,4 +73,6 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <script src="./js/novousuario.js"></script>
 </html>
