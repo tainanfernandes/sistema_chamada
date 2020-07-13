@@ -58,15 +58,33 @@ $.validator.addMethod('senhaForte', (value, element) => {
 $('#formCadastrar').validate({
     errorElement: 'div',
     errorClass: 'invalid-feedback',
+    errorPlacement: function(error, element) {
+        if ($(element).attr("name") == "radioAlunoProfessor") {
+            error.insertAfter("#inputCodProfessorWrap");
+        } else {
+            error.insertAfter(element);
+        }
+    },
+
     highlight: (element, errorClass) => {
-        $(element).removeClass('is-valid')
-        $(element).addClass('is-invalid')
+        if ($(element).attr("name") == "radioAlunoProfessor") {
+            $('#radioProfessor').addClass('is-invalid')
+            $('#radioAluno').addClass('is-invalid')
+        }
+        else {
+            $(element).removeClass('is-valid')
+            $(element).addClass('is-invalid')
+        }
     },
     unhighlight: (element, errorClass) => {
-        if ($(element).hasClass('is-invalid')) {
-            $(element).addClass('is-valid')
+        if ($(element).attr("name") == "radioAlunoProfessor") {
+            $('#radioProfessor').removeClass('is-invalid')
+            $('#radioAluno').removeClass('is-invalid')
         }
-        $(element).removeClass('is-invalid')
+        else {
+            $(element).addClass('is-valid')
+            $(element).removeClass('is-invalid')
+        }
     },
     onfocusout: (element) => {
         $(element).valid()
@@ -97,7 +115,8 @@ $('#formCadastrar').validate({
         inputPasswordRepeat: {
             required: true,
             equalTo: '#inputPassword'
-        }
+        },
+        radioAlunoProfessor: 'required'
     },
     messages: {
         inputNome: 'Este campo é obrigatório.',
@@ -116,8 +135,9 @@ $('#formCadastrar').validate({
             required: 'Este campo é obrigatório.',
             equalTo: 'As duas senhas devem corresponder.'
         },
-        inputRa:  'Este campo é obrigatório.',
-        inputCodProfessor:  'Este campo é obrigatório.'
+        radioAlunoProfessor: 'Este campo é obrigatório.',
+        inputRa: 'Este campo é obrigatório.',
+        inputCodProfessor: 'Este campo é obrigatório.'
     }
 })
 
