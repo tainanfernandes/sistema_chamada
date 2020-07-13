@@ -63,16 +63,19 @@ $('#formCadastrar').validate({
         $(element).addClass('is-invalid')
     },
     unhighlight: (element, errorClass) => {
-        $(element).addClass('is-valid')
+        if ($(element).hasClass('is-invalid')) {
+            $(element).addClass('is-valid')
+        }
         $(element).removeClass('is-invalid')
     },
     onfocusout: (element) => {
         $(element).valid()
-        $(element).data('validated', true)
+        $(element).addClass('js-validated')
     },
     onkeyup: (element) => {
-        if ($(element).data('validated')) {
+        if ($(element).hasClass('js-validated')) {
             $(element).valid()
+            $(element).addClass('js-validated')
         }
     },
 
