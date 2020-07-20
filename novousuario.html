@@ -18,49 +18,49 @@
 
   <body>
     <!-- Formulário Onde o usuario poderá se cadastrar para ter acesso a uma conta-->
-    <form class="form-signin">
+    <form class="form-signin" id="formCadastrar">
       <div class="text-center mb-4">
         <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
         </div>
       <div class="form-label-group">
-        <input type="nome" id="inputNome" class="form-control" placeholder="Nome" required autofocus>
+        <input type="text" name="inputNome" id="inputNome" class="form-control" placeholder="Nome" autocomplete="given-name">
         <label for="inputNome">Nome</label>
       </div>
       <div class="form-label-group">
-        <input type="sobrenome" id="inputSobrenome" class="form-control" placeholder="Sobrenome" required>
+        <input type="text" name="inputSobrenome" id="inputSobrenome" class="form-control" placeholder="Sobrenome" autocomplete="family-name">
         <label for="inputSobrenome">Sobrenome</label>
       </div>
       <div class="form-label-group">
-        <input type="cpf" id="inputCpf" class="form-control" placeholder="CPF" required >
+        <input type="text" name="inputCpf" id="inputCpf" class="form-control" placeholder="CPF" >
         <label for="inputCpf">CPF</label>
       </div>
       <div class="form-label-group">
-        <input type="email" id="inputEmail" class="form-control" placeholder="Endereço de email" required >
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Endereço de email" autocomplete="email">
         <label for="inputEmail">Endereço de email</label>
       </div>
       <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Senha" autocomplete="new-password">
         <label for="inputPassword">Senha</label>
       </div>
       <div class="form-label-group">
-        <input type="password" id="inputSenha" class="form-control" placeholder="Confirmar Senha" required>
-        <label for="inputSenha">Confirmar Senha</label>
-      </div>
-      <div class="custom-control custom-radio custom-control-inline" id="radio">
-        <input type="radio" id="customRadioInline1 " name="customRadioInline1" class="custom-control-input">
-        <label class="custom-control-label" for="customRadioInline1">Sou Professor</label>
+        <input type="password" name="inputPasswordRepeat" id="inputPasswordRepeat" class="form-control" placeholder="Confirmar Senha" autocomplete="new-password">
+        <label for="inputPasswordRepeat">Confirmar Senha</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="customRadioInline2 " name="customRadioInline1" class="custom-control-input">
-        <label class="custom-control-label" for="customRadioInline2">Sou aluno</label>
+        <input type="radio" name="radioAlunoProfessor" id="radioProfessor" class="custom-control-input" value="0">
+        <label class="custom-control-label" for="radioProfessor">Sou Professor</label>
       </div>
-      <div class="form-label-group">
-        <input type="RA" id="inputRa" class="form-control" placeholder="RA" required >
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" name="radioAlunoProfessor" id="radioAluno" class="custom-control-input" value="1">
+        <label class="custom-control-label" for="radioAluno">Sou aluno</label>
+      </div>
+      <div class="form-label-group d-none" id="inputRaWrap">
+        <input type="RA" name="inputRa" id="inputRa" class="form-control" placeholder="RA" >
         <label for="inputRa">RA</label>
       </div>
-      <div class="form-label-group">
-        <input type="CódigoProfessor" id="inputCodigoProfessor" class="form-control" placeholder="Código Professor" required >
-        <label for="inputCodigoProfessor">Código Professor</label>
+      <div class="form-label-group d-none" id="inputCodProfessorWrap">
+        <input type="CódigoProfessor" name="inputCodProfessor" id="inputCodProfessor" class="form-control" placeholder="Código Professor">
+        <label for="inputCodProfessor">Código Professor</label>
       </div>
 
       <!-- Rodapé-->
@@ -70,7 +70,14 @@
 
   </body>
 
+  <!-- Bootstrap + JQuery -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- JQuery Validaton + InputMask -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.3/dist/jquery.inputmask.min.js"></script>
+
+  <script src="./js/novousuario.js"></script>
 </html>
