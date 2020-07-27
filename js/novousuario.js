@@ -161,6 +161,12 @@ $('#radioAluno').click(_ => {
     $('#inputCodProfessor').rules('remove', 'required')
 })
 
+function loginMessage(title, message) {
+    $('#modal-login-titulo').text(title)
+    $('#modal-login-corpo').text(message)
+    $('#modal-login').modal()
+}
+
 // Submit
 $('#formCadastrar').submit((e) => {
     e.preventDefault()
@@ -176,10 +182,19 @@ $('#formCadastrar').submit((e) => {
             codProfessor: $('#inputCodProfessor').val()
         })
         .done((result) => {
-            console.log(result)
-        })
-        .fail((jqXHR, textStatus, errorThrown) => {
-            console.error(jqXHR, textStatus, errorThrown)
+            switch (result.status) {
+                case 201:
+                    loginMessage('Sucesso!', 'Cadastro realizado com sucesso')
+                    // TODO: Sucesso
+                    break;
+                case 400:
+                    loginMessage('Como?', 'Ocorreu um erro inesperado. Seo problema persistir, contate o suporte')
+                    break;
+                case 403:
+                    loginMessage('Erro', 'Alguns dos documentos informados pertence a outro usuário. Por favor, verifique os dados inseridos')
+                    break;
+            }
+
         })
     }
 })

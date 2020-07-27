@@ -21,7 +21,7 @@
     <form class="form-signin" id="formCadastrar">
       <div class="text-center mb-4">
         <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
-        </div>
+      </div>
       <div class="form-label-group">
         <input type="text" name="inputNome" id="inputNome" class="form-control" placeholder="Nome" autocomplete="given-name">
         <label for="inputNome">Nome</label>
@@ -68,6 +68,24 @@
       <p class="mt-5 mb-3 text-muted text-center">&copy; TechLab - 2020</p>
     </form>
 
+    <div class="modal" id="modal-login" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-login-titulo"></h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="modal-login-corpo"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-login">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
   <!-- Bootstrap + JQuery -->
