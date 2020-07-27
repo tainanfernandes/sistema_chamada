@@ -1,4 +1,6 @@
-// Mascara do CPF
+// Máscaras
+$('#inputNome').inputmask('a{3,}[ a{*}]', {"placeholder": "", clearIncomplete: true})
+$('#inputSobrenome').inputmask('a{3,}[ a{*}]', {"placeholder": "",clearIncomplete: true})
 $('#inputCpf').inputmask('999.999.999-99', {clearIncomplete: true, removeMaskOnSubmit: true})
 
 // Validador do CPF
@@ -7,10 +9,10 @@ $.validator.addMethod('cpf', (value, element) => {
     value = value.replace(/\-/g, '')
     value = value.replace(/\s/g, '').trim()
 
-    if (/^[0-9]+$/.test(value) && value.length == 11) {
-        let first_dig = 0
-        let second_dig = 0
-        let streak = value[0]
+    if (/^[0-9]{11}$/.test(value)) {
+        let first_dig = 0,
+            second_dig = 0,
+            streak = value[0]
 
         // Soma os valores dos 9 promeiros digitos e multiplica de acordo com a formula
         for (var i = 0; i < 9; i++) {
@@ -157,4 +159,42 @@ $('#radioAluno').click(_ => {
 
     $('#inputRa').rules('add', 'required')
     $('#inputCodProfessor').rules('remove', 'required')
+})
+
+function loginMessage(title, message) {
+    $('#modal-login-titulo').text(title)
+    $('#modal-login-corpo').text(message)
+    $('#modal-login').modal()
+}
+
+// Submit
+$('#formCadastrar').submit((e) => {
+    e.preventDefault()
+    if ($(e.currentTarget).valid()) {
+        $.post('../controller/novousuario.php', {
+            nome: $('#inputNome').val(),
+            sobrenome: $('#inputSobrenome').val(),
+            email: $('#inputEmail').val(),
+            cpf: $('#inputCpf').val(),
+            senha: $('#inputPassword').val(),
+            tipo: $('input[name="radioAlunoProfessor"]:checked').val(),
+            ra: $('#inputRa').val(),
+            codProfessor: $('#inputCodProfessor').val()
+        })
+        .done((result) => {
+            switch (result.status) {
+                case 201:
+                    loginMessage('Sucesso!', 'Cadastro realizado com sucesso')
+                    // TODO: Sucesso
+                    break;
+                case 400:
+                    loginMessage('Como?', 'Ocorreu um erro inesperado. Seo problema persistir, contate o suporte')
+                    break;
+                case 403:
+                    loginMessage('Erro', 'Alguns dos documentos informados pertence a outro usuário. Por favor, verifique os dados inseridos')
+                    break;
+            }
+
+        })
+    }
 })
