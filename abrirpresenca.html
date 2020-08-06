@@ -1,145 +1,153 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <!-- Configuração Padrão-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Icone da Aba -->
-    <link rel="icon" href="img/lab-preto.png">
-    <!--Titulo da Aba-->
-    <title>Sistema de Chamadas</title>
 
-    <!-- CSS Reset-->
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- Principal CSS do Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- Principal CSS da Estrutura padrão -->
-    <link rel="stylesheet" href="css/index.css">
-    <!-- Principal CSS da Tela -->
-    <link rel="stylesheet" href="css/abrirpresenca.css">
+<head>
+  <!-- Configuração Padrão-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Icone da Aba -->
+  <link rel="icon" href="img/lab-preto.png">
+  <!--Titulo da Aba-->
+  <title>Sistema de Chamadas</title>
 
-  </head>
+  <!-- CSS Reset-->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- Principal CSS do Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Principal CSS da Estrutura padrão -->
+  <link rel="stylesheet" href="css/index.css">
+  <!-- Principal CSS da Tela -->
+  <link rel="stylesheet" href="css/abrirpresenca.css">
 
-  <!-- CABEÇALHO-->
-  <header>
-    <!-- Barra de Navegação Padrão Professor-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">
-        <img src="img/lab.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Sistema de Chamada
-      </a>
-      <div class="collapse navbar-collapse flex-grow-1" id="navbarNavDropdown">
-        <ul class="navbar-nav" id="item-ul">
-          <li class="nav-item">
-            <a class="nav-link" href="principalprof.html" id="item-li">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="listaonline.html" id="item-li">Abrir Presença</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cadastrarturma.html" id="item-li">Criar Turma</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Relatórios
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="relatoriodisciplina.html">Relatório Disciplina</a>
-              <a class="dropdown-item" href="relatoriodetalhado.html">Relatório Detalhado</a>
-            </div>
-          </li>
-        </ul>
+</head>
 
-        <div id="user-controls">
-          <a id="user-controls-perfil" href="perfilprof.html"><span class="text-white">Perfil</span><span></span></a>
-          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="button-sair">Sair</button>
-        </div>
-      </div>
-    </nav>
-  </header>
+<!-- CABEÇALHO-->
+<header>
+  <!-- Barra de Navegação Padrão Professor-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="img/lab.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Sistema de Chamada
+    </a>
+    <div class="collapse navbar-collapse flex-grow-1" id="navbarNavDropdown">
+      <ul class="navbar-nav" id="item-ul">
+        <li class="nav-item">
+          <a class="nav-link" href="principalprof.html" id="item-li">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="listaonline.html" id="item-li">Abrir Presença</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cadastrarturma.html" id="item-li">Criar Turma</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Relatórios
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="relatoriodisciplina.html">Relatório Disciplina</a>
+            <a class="dropdown-item" href="relatoriodetalhado.html">Relatório Detalhado</a>
+          </div>
+        </li>
+      </ul>
 
-  <!-- CORPO DA TELA-->
-  <body>
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-6">Chamada Aberta</h1>
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="button-finalizar"><a href="">Finalizar Chamada</a></button>
+      <div id="user-controls">
+        <a id="user-controls-perfil" href="perfilprof.html"><span class="text-white">Perfil</span><span></span></a>
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="button-sair">Sair</button>
       </div>
     </div>
-    <!-- Nessa parte está mostrando o PIN que os alunos irão utilizar para comprovar presença e total dos que estão presente e ausentes-->
-    <div id="campos">
-      <form>
-        <div class="row">
-          <div class="col">
-            <label for="inputpresente"><b>Alunos Presentes</b></label>
-            <input type="number" class="form-control" placeholder="25" id="disabledInput" class="presente" disabled>
-          </div>
-          <div class="col">
-            <label for="inputpin"><b>PIN</b></label>
-            <input type="number" class="form-control" placeholder="8965321475" id="disabledInput" class="pin" disabled>
-          </div>
-          <div class="col">
-            <label for="inputausente"><b>Alunos Ausentes</b></label>
-            <input type="number" class="form-control" placeholder="18" id="disabledInput" class="ausente" disabled>
-          </div>
+  </nav>
+</header>
+
+<!-- CORPO DA TELA-->
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-6">Chamada Aberta</h1>
+      <a class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="button-finalizar" href="">Finalizar Chamada</a>
+    </div>
+  </div>
+  <!-- Nessa parte está mostrando o PIN que os alunos irão utilizar para comprovar presença e total dos que estão presente e ausentes-->
+  <div id="campos">
+    <form>
+      <div class="row">
+        <div class="col">
+          <label class="presentesLabel" for="inputpresente"><b>Alunos Presentes</b></label>
+          <input type="number" class="form-control presente" placeholder="25" id="disabledInput" disabled>
         </div>
-      </form>
-      <!-- Nessa parte é uma tabela, que vai atualizando conforme os alunos forem confirmando a presença. Tem o slogan do TechLab que poderá futuramente ser substituido pelo qrcode-->
-     <div>
+        <div class="col">
+          <label class="pinLabel" for="inputpin"><b id="textPin">PIN</b></label>
+          <input type="number" class="form-control pin" placeholder="8965321475" id="disabledInput" disabled>
+        </div>
+        <div class="col">
+          <label class="ausentesLabel" for="inputausente"><b>Alunos Ausentes</b></label>
+          <input type="number" class="form-control ausente" placeholder="18" id="disabledInput" disabled>
+        </div>
+      </div>
+    </form>
+    <!-- Nessa parte é uma tabela, que vai atualizando conforme os alunos forem confirmando a presença. Tem o slogan do TechLab que poderá futuramente ser substituido pelo qrcode-->
+    <div>
       <img src="img/lab-preto.png" width="300" height="300" class="d-inline-block align-top" alt="" id="img">
-        <div class="table-responsive">
-          <table class="table table-striped" id="table-presenca">
-            <thead>
-              <tr>
-                <th scope="col"><b>Alunos com Presença Confirmada</b></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Maria Paula Da Silva</td>
-              </tr>
-              <tr>
-                <td>João Pereira</td>
-              </tr>
-              <tr>
-                <td>Marcos dos santos</td>
-              </tr>
-              <tr>
-                <td>Antonio Carambolas</td>
-              </tr>
-              <tr>
-                <td>Paulo da silva</td>
-              </tr>
-              <tr>
-                <td>Lucas Oliveira</td>
-              </tr>
-              <tr>
-                <td>Ana catarina</td>
-              </tr>
-              <tr>
-                <td>Rita ritalina</td>
-              </tr>
-              <tr>
-                <td>Cansei de inventar nomes</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="table-responsive">
+        <table class="table table-striped" id="table-presenca">
+          <thead>
+            <tr>
+              <th scope="col"><b>Alunos com Presença Confirmada</b></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Maria Paula Da Silva</td>
+            </tr>
+            <tr>
+              <td>João Pereira</td>
+            </tr>
+            <tr>
+              <td>Marcos dos santos</td>
+            </tr>
+            <tr>
+              <td>Antonio Carambolas</td>
+            </tr>
+            <tr>
+              <td>Paulo da silva</td>
+            </tr>
+            <tr>
+              <td>Lucas Oliveira</td>
+            </tr>
+            <tr>
+              <td>Ana catarina</td>
+            </tr>
+            <tr>
+              <td>Rita ritalina</td>
+            </tr>
+            <tr>
+              <td>Cansei de inventar nomes</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 
-  <!--RODAPÉ DA TELA-->
-  <footer class="footer mt-auto py-3">
-    <nav class="navbar fixed-bottom navbar-light bg-light">
-      <a class="navbar-brand" id= "footer-a" href="#">Desenvolvido por TechLab</a>
-      <a>E-mail: Techlab@pitagorasraja.net.br</a>
-    </nav>
-  </footer>
+<!--RODAPÉ DA TELA-->
+<footer class="footer mt-auto py-3">
+  <nav class="navbar fixed-bottom navbar-light bg-light">
+    <a class="navbar-brand" id="footer-a" href="#">Desenvolvido por TechLab</a>
+    <a>E-mail: Techlab@pitagorasraja.net.br</a>
+  </nav>
+</footer>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </html>

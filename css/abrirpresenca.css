@@ -1,21 +1,44 @@
 h1 {
     margin-top: 40px;
 }
-.presente {
-    background-color: lightgreen;
+
+.pinLabel {
+    position: relative;
+    left: 49%;
 }
-.ausente {
-    background-color: tomato;
+
+.presentesLabel, .ausentesLabel {
+    position: relative;
+    left: 60px;
 }
-.pin{
-    width: 326px;
-    color: black;
+.pin::placeholder{
+    text-align: center;
 }
+
+.presente, .ausente, .pin {
+    width: 300px;
+    position: relative;
+    left: 55px;
+}
+
+.presente:disabled {
+    background-color: rgb(188, 252, 188);
+}
+
+.ausente:disabled {
+    background-color: rgb(255, 168, 153);
+}
+
+.pin:disabled {
+    justify-content: center;
+}
+
 #campos {
     margin-left: 70px;
     margin-right: 70px;
     margin-bottom: 40px;
 }
+
 .table-responsive {
     position: relative;
     float: right;
@@ -24,9 +47,11 @@ h1 {
     width: 800px;
     margin-bottom: 60px;
 }
+
 #button-finalizar {
     float: right;
 }
+
 #img {
-    margin-top:80px;
+    margin-top: 80px;
 }
