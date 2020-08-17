@@ -71,37 +71,37 @@
 
     <!-- Nessa parte, está um formulário onde o professor poderá cadastrar uma nova turma-->
     <div class="formulario">
-      <form>
+      <form id="formturma">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputcurso">Curso</label>
-            <input type="text" class="form-control" id="inputcurso" placeholder="Curso">
+            <input type="text" class="form-control" id="inputcurso" name="inputcurso" placeholder="Curso">
           </div>
           <div class="form-group col-md-6">
             <label for="inputdisciplina">Disciplina</label>
-            <input type="text" class="form-control" id="inputdisciplina" placeholder="Disciplina">
+            <input type="text" class="form-control" id="inputdisciplina" name="inputdisciplina" placeholder="Disciplina">
           </div>
           <div class="form-group col-md-6">
             <label for="inputdia">Dia da Semana</label>
             <select id="inputdia" class="form-control">
-              <option>Segunda-Feira</option>
-              <option>Terça-Feira</option>
-              <option>Quarta-Feira</option>
-              <option>Quinta-Feira</option>
-              <option>Sexta-Feira</option>
+              <option value="seg">Segunda-Feira</option>
+              <option value="ter">Terça-Feira</option>
+              <option value="qua">Quarta-Feira</option>
+              <option value="qui">Quinta-Feira</option>
+              <option value="sex">Sexta-Feira</option>
             </select>
           </div>
           <div class="form-group col-md-6">
             <label for="inputturno">Turno</label>
-            <select id="inputturno" class="form-control">
-              <option>Manhã</option>
-              <option>Noite</option>
+            <select id="inputturno" name="inputturno" class="form-control">
+              <option value="1">Manhã</option>
+              <option value="2">Noite</option>
             </select>
           </div>
         </div>
           <div class="form-group col-md-14">
             <label for="inputdescricao">Observação</label>
-            <input type="text" class="form-control" id="inputdescricao" placeholder="Observação">
+            <input type="text" class="form-control" id="inputdescricao" name="inputdescricao" placeholder="Observação">
           </div>
         <button type="submit" class="btn btn-outline-dark my-2 my-sm-0" id="cadastrar">Cadastrar</button>
         </div>
@@ -117,7 +117,12 @@
     </nav>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+   <!-- JQuery Validaton + InputMask -->
+   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+
+   <script src="./js/cadastrarturma.js"></script>
 </html>
