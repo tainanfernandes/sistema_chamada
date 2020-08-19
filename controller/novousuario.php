@@ -17,16 +17,16 @@ $ajax = FromAjax::Post(
     'codProfessor');
 
 if ($ajax && Validate::Login($ajax)) {
-    $statement = false;
+    $stmt = false;
     $matricula = false;
 
     switch ($ajax['tipo']) {
         case '0':
-            $statement = "INSERT IGNORE INTO professor (cpf, nome, sobreNome, senha, pin, matricula) VALUES (?, ?, ?, ?, ?, ?)";
+            $stmt = 'INSERT IGNORE INTO professor (cpf, nome, sobreNome, email, senha, pin, codigoProfessor) VALUES (?, ?, ?, ?, ?, ?, ?)';
             $matricula = $ajax['codProfessor'];
             break;
         case '1':
-            $statement = "INSERT IGNORE INTO aluno (cpf, nome, sobreNome, senha, pin, ra) VALUES (?, ?, ?, ?, ?, ?)";
+            $stmt = 'INSERT IGNORE INTO aluno (cpf, nome, sobreNome, email, senha, pin, ra) VALUES (?, ?, ?, ?, ?, ?, ?)';
             $matricula = $ajax['ra'];
             break;
     }
@@ -34,11 +34,11 @@ if ($ajax && Validate::Login($ajax)) {
     $pin = rand();
     $pwd = password_hash($ajax['senha'] . $pin, PASSWORD_DEFAULT);
 
-    $statement = $mysqli->prepare($statement);
-    $statement->bind_param('ssssis', $ajax['cpf'], $ajax['nome'], $ajax['sobrenome'], $pwd, $pin, $matricula);
-    $statement->execute();
+    $stmt = $mysqli->prepare($stmt);
+    $stmt->bind_param('ssssis', $ajax['cpf'], $ajax['nome'], $ajax['sobrenome'], $ajax['senha'], $pwd, $pin, $matricula);
+    $stmt->execute();
 
-    if ($statement->affected_rows) {
+    if ($stmt->affected_rows) {
         echo '{"status":201,"msg":"Sucesso"}';
 
         session_start();
@@ -53,7 +53,7 @@ if ($ajax && Validate::Login($ajax)) {
     }
     else echo '{"status":403,"msg":"Campos duplicados"}';
 
-    $statement->close();
+    $stmt->close();
 }
 else echo '{"status":400,"msg":"Parametros Inválidos"}';
 
