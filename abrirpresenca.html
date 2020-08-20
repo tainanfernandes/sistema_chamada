@@ -66,7 +66,7 @@
 <!-- CORPO DA TELA-->
 
 <body>
-  <div class="jumbotron">
+  <div  class="jumbotron">
     <div class="container">
       <h1 class="display-6">Chamada Aberta</h1>
       <a class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="button-finalizar" href="">Finalizar Chamada</a>
@@ -75,24 +75,27 @@
   <!-- Nessa parte está mostrando o PIN que os alunos irão utilizar para comprovar presença e total dos que estão presente e ausentes-->
   <div id="campos">
     <form>
-      <div class="row">
-        <div class="col">
-          <label class="presentesLabel" for="inputpresente"><b>Alunos Presentes</b></label>
-          <input type="number" class="form-control presente" placeholder="25" id="disabledInput" disabled>
-        </div>
-        <div class="col">
-          <label class="pinLabel" for="inputpin"><b id="textPin">PIN</b></label>
-          <input type="number" class="form-control pin" placeholder="8965321475" id="disabledInput" disabled>
-        </div>
-        <div class="col">
-          <label class="ausentesLabel" for="inputausente"><b>Alunos Ausentes</b></label>
-          <input type="number" class="form-control ausente" placeholder="18" id="disabledInput" disabled>
+      <div id="informacaochamada">
+        <div class="row">
+          <div class="col-sm-4">
+            <label class="presentesLabel" for="inputpresente"><b>Alunos Presentes</b></label>
+            <input type="number" class="form-control presente" placeholder="25" id="disabledInput" disabled>
+          </div>
+          <div class="col-sm-4">
+            <label class="pinLabel" for="inputpin"><b id="textPin">PIN</b></label>
+            <input type="number" class="form-control pin" placeholder="8965321475" id="disabledInput" disabled>
+          </div>
+          <div class="col-sm-4">
+            <label class="ausentesLabel" for="inputausente"><b>Alunos Ausentes</b></label>
+            <input type="number" class="form-control ausente" placeholder="18" id="disabledInput" disabled>
+          </div>
         </div>
       </div>
+    
     </form>
     <!-- Nessa parte é uma tabela, que vai atualizando conforme os alunos forem confirmando a presença. Tem o slogan do TechLab que poderá futuramente ser substituido pelo qrcode-->
     <div>
-      <img src="img/lab-preto.png" width="300" height="300" class="d-inline-block align-top" alt="" id="img">
+      <img id="imagem" src="img/lab-preto.png" width="300" height="300" class="d-inline-block align-top" alt="" id="img">
       <div class="table-responsive">
         <table class="table table-striped" id="table-presenca">
           <thead>

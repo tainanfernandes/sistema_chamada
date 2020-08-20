@@ -55,3 +55,34 @@ h1 {
 #img {
     margin-top: 80px;
 }
+
+@media (min-width: 0){
+    .display-6{
+        font-size: 20px;
+    
+    }
+    #button-finalizar{
+        float: left;
+        font-size: 10px;
+        
+    }
+    .jumbotron{
+        padding-bottom: 50px;
+    }
+
+    #disableImput{
+        size: small;
+        float: left;
+
+    }
+    #campos{
+        margin-left: 0;
+    }
+    #imagem{
+        width: 200px;
+        height: 200px;
+        float:right;
+        float: left;
+        margin-top 50px;
+    }
+    
