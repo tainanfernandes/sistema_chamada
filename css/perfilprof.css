@@ -30,3 +30,182 @@ h1{
     left: 100px;
     padding-top: 25px;
 }
+
+@media (min-width:0){
+    .display-6{
+        font-size: 30px;
+        text-align: center;
+    }
+    #frase{
+        font-size: 15px;
+        text-align:justify;
+    }
+    
+    #user{
+        max-width:100px;
+        max-height:100px;
+        width: auto;
+        height: auto;
+        position: central;
+        
+    }
+    #PerfilProf{
+        font-size: 20px ;
+        position: relative;
+        left: 110px;
+        
+    }
+    #formulario{
+        width: 270px;
+        position: relative;
+        left: 65px;
+        float: left;
+        float: right;
+    }
+    .perfil{
+        position: relative;
+        left: -80px;
+        
+    }
+    #editar{
+        margin-bottom: 40px;
+    }
+    .navbar, #footer-a{
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 375px){
+    .display-6{
+        font-size: 40px;
+        text-align: center;
+    }
+    #frase{
+        font-size: 20px;
+        text-align:justify;
+    }
+    
+    #user{
+        max-width:150px;
+        max-height:150px;
+        width: auto;
+        height: auto;
+        position: central;     
+    }
+
+    #PerfilProf{
+        font-size: 30px ;
+        position: relative;
+        left: 110px;
+       
+        
+        
+    }
+    #formulario{
+        width: 320px;
+        position: relative;
+        left: 65px;
+        float: left;
+        float: right;
+    }
+    .perfil{
+        position: relative;
+        left: -80px;
+        
+    }
+    #editar{
+        margin-bottom: 50px;
+    }
+    .navbar, #footer-a{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 425px){
+    .display-6{
+        font-size: 40px;
+        text-align: center;
+    }
+    #frase{
+        font-size: 20px;
+        text-align:justify;
+    }
+    
+    #user{
+        max-width:150px;
+        max-height:150px;
+        width: auto;
+        height: auto;
+        position: central;
+    }
+
+    #PerfilProf{
+        font-size: 30px ;
+        position: relative;
+        left: 115px;
+       
+        
+        
+    }
+    #formulario{
+        width: 360px;
+        position: relative;
+        left: 65px;
+        float: left;
+        float: right;
+    }
+  
+    #editar{
+        margin-bottom: 50px;
+    }
+    .navbar, #footer-a{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px)and(max-width: 1023px){
+    .display-6{
+        font-size: 40px;
+        text-align: center;
+    }
+    #frase{
+        font-size: 20px;
+        text-align:justify;
+    }
+    
+    #user{
+        max-width:150px;
+        max-height:150px;
+        width: auto;
+        height: auto;
+        position: central;
+    }
+
+    #PerfilProf{
+        font-size: 30px ;
+        position: relative;
+        float: right;
+        bottom: 120px;
+        left: 80px;
+       
+        
+        
+    }
+    #formulario{
+        width: 700px;
+        position: relative;
+        float: left;
+        float: right;
+    }
+  
+    #editar{
+        margin-bottom: 50px;
+    }
+    .navbar, #footer-a{
+        font-size: 17px;
+    }
+    b{
+        text-align: center;
+    }
+}
+
