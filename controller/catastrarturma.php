@@ -18,9 +18,12 @@ if (
     in_array($ajax['dia'], ["seg", "ter", "qua", "qui", "sex"]) &&
     in_array($ajax['turno'], ["1", "2"])
 ) {
+    $aux = 0; // TEMPORARIO //TODO
+
     $stmt = $mysqli->prepare('SELECT id FROM curso WHERE nome=?');
     $stmt->bind_param('s', $ajax['curso']);
     $stmt->execute();
+    $stmt->store_result();
 
     $id = NULL;
 
@@ -34,35 +37,56 @@ if (
         $stmt->bind_param('s', $ajax['curso']);
         $stmt->execute();
 
-        $id = $mysqli->inserted_id;
+        $id = $mysqli->insert_id;
     }
 
     $stmt->close();
-    $stmt = $mysqli->prepare('INSERT IGNORE INTO disciplina (nome, periodo, idcurso) VALUES (?, ?, ?)');
-    $stmt->bind_param('sii', $ajax['disciplina'], 0, $id);
+    $stmt = $mysqli->prepare('SELECT id FROM disciplina WHERE nome=? AND idcurso=?');
+    $stmt->bind_param('si', $ajax['disciplina'], $id);
     $stmt->execute();
+    $stmt->store_result();
 
-    if ($stmt->affected_rows) {
-        $id = $mysqli->inserted_id;
-    }
-    else {
-        $stmt = $mysqli->prepare('SELECT id FROM disciplina WHERE nome=? AND idcurso=?');
-        $stmt->bind_param('si', $ajax['disciplina'], $id);
-        $stmt->execute();
-
+    if ($stmt->num_rows) {
         $stmt->bind_result($id);
         $stmt->fetch();
     }
+    else {
+        $stmt->close();
+        $stmt = $mysqli->prepare('INSERT IGNORE INTO disciplina (nome, periodo, idcurso) VALUES (?, ?, ?)');
+        // TODO periodo
+        $stmt->bind_param('sii', $ajax['disciplina'], $aux, $id);
+        $stmt->execute();
 
-    session_start();
+        $id = $mysqli->insert_id;
+    }
 
     $stmt->close();
-    $stmt = $mysqli->prepare('INSERT INTO turma (dia, idperiodoLetivo, idturno, iddisdiplina, idprofessor) VALUES (?, ?, ?, ?, ?)');
-    $stmt->bind_param('iiiii', $ajax['dia'], 0, $ajax['turno'], $id, $_SESSION['user']['cpf']);
+    $stmt = $mysqli->prepare('SELECT id FROM turma WHERE dia=? AND iddisciplina=? AND idturno=?');
+    $stmt->bind_param('sii', $ajax['dia'], $id, $ajax['turno']);
     $stmt->execute();
+    $stmt->store_result();
 
-    session_write_close();
+    if ($stmt->num_rows) {
+        echo '{"status":403,"msg":"Campos duplicados"}';
+    }
+    else {
+        session_start();
+
+        $stmt->close();
+        $stmt = $mysqli->prepare('INSERT INTO turma (dia, idperiodoLetivo, idturno, iddisciplina, idprofessor) VALUES (?, ?, ?, ?, ?)');
+        // TODO periodo
+        $stmt->bind_param('siiii', $ajax['dia'], $aux, $ajax['turno'], $id, $_SESSION['user']['id']);
+        $stmt->execute();
+
+        session_write_close();
+
+        if ($stmt->affected_rows) {
+            echo '{"status":201,"msg":"Sucesso"}';
+        }
+        else echo '{"status":500,"msg":"Erro Desconhecido"}';
+    }
     $stmt->close();
 }
+else echo '{"status":400,"msg":"Parametros Inválidos"}';
 
 ?>

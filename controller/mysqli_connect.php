@@ -2,7 +2,7 @@
 namespace controller;
 
 $mysqli = new \mysqli("191.252.185.132", "sandereto", "Sander@2017", 'toAqui', '3306');
-if($mysqli->connect_error) {
+if ($mysqli->connect_error) {
     exit('Erro ao conectar ao banco de dados');
 }
 

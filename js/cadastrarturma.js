@@ -48,22 +48,40 @@ $('#formturma').validate({
     }
 })
 
+function cadMessage(title, message) {
+    $('#modal-login-titulo').text(title)
+    $('#modal-login-corpo').text(message)
+    $('#modal-login').modal()
+}
+
 // Submit
 $('#formturma').submit((e) => {
     e.preventDefault()
     if ($(e.currentTarget).valid()) {
         $.post('../controller/catastrarturma.php', {
-            curso: $('#inputNome').val(),
-            disciplina: $('#inputSobrenome').val(),
-            dia: $('#inputEmail').val(),
-            turno: $('#inputCpf').val(),
+            curso: $('#inputcurso').val(),
+            disciplina: $('#inputdisciplina').val(),
+            dia: $('#inputdia').val(),
+            turno: $('#inputturno').val(),
             descricao: $('#inputdescricao').val()
         })
         .done((result) => {
             switch (result.status) {
-                // TODO:
+                case 201:
+                    cadMessage('Sucesso!', 'Cadastro realizado com sucesso.')
+                    // TODO: Sucesso
+                    break;
+                case 500:
+                case 400:
+                    cadMessage('Como?', 'Ocorreu um erro inesperado. Se o problema persistir, contate o suporte.')
+                    break;
+                case 403:
+                    cadMessage('Erro', 'Alguma dos dados informados já foram cadastrados. Por favor, verifique e tentenovamente.')
+                    break;
             }
-
+        })
+        .fail((jqXHR, textStatus, errorThrown) => {
+            console.error(errorThrown)
         })
     }
 })

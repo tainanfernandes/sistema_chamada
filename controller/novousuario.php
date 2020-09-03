@@ -16,7 +16,7 @@ $ajax = FromAjax::Post(
     'ra',
     'codProfessor');
 
-if ($ajax && Validate::Login($ajax)) {
+if ($ajax && \Validate::Login($ajax)) {
     $stmt = false;
     $matricula = false;
 
@@ -35,7 +35,7 @@ if ($ajax && Validate::Login($ajax)) {
     $pwd = password_hash($ajax['senha'] . $pin, PASSWORD_DEFAULT);
 
     $stmt = $mysqli->prepare($stmt);
-    $stmt->bind_param('ssssis', $ajax['cpf'], $ajax['nome'], $ajax['sobrenome'], $ajax['senha'], $pwd, $pin, $matricula);
+    $stmt->bind_param('issssis', $ajax['cpf'], $ajax['nome'], $ajax['sobrenome'], $ajax['email'], $pwd, $pin, $matricula);
     $stmt->execute();
 
     if ($stmt->affected_rows) {
@@ -47,7 +47,8 @@ if ($ajax && Validate::Login($ajax)) {
             'sobrenome' => $ajax['sobrenome'],
             'cpf'       => $ajax['cpf'],
             'matricula' => $matricula,
-            'tipo'      => $ajax['tipo']
+            'tipo'      => $ajax['tipo'],
+            'id'        => $stmt->insert_id
         ];
         session_write_close();
     }
