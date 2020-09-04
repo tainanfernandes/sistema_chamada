@@ -184,14 +184,14 @@ $('#formCadastrar').submit((e) => {
         .done((result) => {
             switch (result.status) {
                 case 201:
-                    loginMessage('Sucesso!', 'Cadastro realizado com sucesso')
+                    loginMessage('Sucesso!', 'Cadastro realizado com sucesso.')
                     // TODO: Sucesso
                     break;
                 case 400:
-                    loginMessage('Como?', 'Ocorreu um erro inesperado. Seo problema persistir, contate o suporte')
+                    loginMessage('Como?', 'Ocorreu um erro inesperado. Se o problema persistir, contate o suporte.')
                     break;
                 case 403:
-                    loginMessage('Erro', 'Alguns dos documentos informados pertence a outro usuário. Por favor, verifique os dados inseridos')
+                    loginMessage('Erro', 'Alguns dos documentos informados pertence a outro usuário. Por favor, verifique os dados inseridos.')
                     break;
             }
 
