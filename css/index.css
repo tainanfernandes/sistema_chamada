@@ -52,6 +52,9 @@
     }
 }
 @media (min-width: 992px) {
+    .navbar, #footer-a{
+        font-size: 14px;
+    }
     #user-controls {
         width: fit-content;
         margin-left: auto;
