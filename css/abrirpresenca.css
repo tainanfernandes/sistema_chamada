@@ -1,21 +1,44 @@
 h1 {
     margin-top: 40px;
 }
-.presente {
-    background-color: lightgreen;
+
+.pinLabel {
+    position: relative;
+    left: 49%;
 }
-.ausente {
-    background-color: tomato;
+
+.presentesLabel, .ausentesLabel {
+    position: relative;
+    left: 60px;
 }
-.pin{
-    width: 326px;
-    color: black;
+.pin::placeholder{
+    text-align: center;
 }
+
+.presente, .ausente, .pin {
+    width: 300px;
+    position: relative;
+    left: 55px;
+}
+
+.presente:disabled {
+    background-color: rgb(188, 252, 188);
+}
+
+.ausente:disabled {
+    background-color: rgb(255, 168, 153);
+}
+
+.pin:disabled {
+    justify-content: center;
+}
+
 #campos {
     margin-left: 70px;
     margin-right: 70px;
     margin-bottom: 40px;
 }
+
 .table-responsive {
     position: relative;
     float: right;
@@ -24,9 +47,378 @@ h1 {
     width: 800px;
     margin-bottom: 60px;
 }
+
 #button-finalizar {
     float: right;
 }
+
 #img {
-    margin-top:80px;
+    margin-top: 80px;
 }
+
+@media (max-width: 320px){
+    h1{
+     font-size: 20px;
+     text-align: center;
+    }
+    #button-finalizar{
+        font-size: 10px;
+        position:relative;
+        bottom: 10px;
+        right: 70px;
+        
+    }
+    .form-control{
+        width: 200px;
+        clear: both;
+       
+    }
+
+    .table-responsive{
+        margin: 5px;
+        margin-bottom: 100px;
+        width: 300px;
+        position: relative;
+        left: 125px;
+        font-size: 10px;
+ 
+}
+    #table-presenca{
+        font-size: 15px;
+    }
+
+    #imagem{
+        max-width: 70px;
+        max-height: 70px;
+        max-width: auto;
+        max-height: auto;
+        clear: both;
+        position: relative;
+       left: 110px;
+       top: 10px;
+
+    }
+    #campos{
+        position: relative;
+        right: 60px;
+    }
+    }
+
+    @media (min-width: 375px){
+        h1{
+         font-size: 30px;
+         text-align: center;
+        }
+        #button-finalizar{
+            font-size: 10px;
+            position:relative;
+            bottom: 10px;
+            right: 100px;
+            
+        }
+        .form-control{
+            width: 300px;
+            clear: both;
+           
+        }
+    
+        .table-responsive{
+            margin: 5px;
+            margin-bottom: 100px;
+            width: 350px;
+            position: relative;
+            left: 145px;
+            font-size: 10px;
+     
+    }
+        #table-presenca{
+            font-size: 15px;
+        }
+    
+        #imagem{
+            max-width: 100px;
+            max-height: 100px;
+            max-width: auto;
+            max-height: auto;
+            clear: both;
+            position: relative;
+           left: 150px;
+           top: 10px;
+    
+        }
+        #campos{
+            position: relative;
+            right: 85px;
+        }
+        }
+        @media (min-width: 425px){
+            h1{
+             font-size: 35px;
+             text-align: center;
+            }
+            #button-finalizar{
+                font-size: 10px;
+                position: relative;
+                bottom: 10px;
+                right:130px ;
+
+                
+            }
+            .form-control{
+                width: 400px;
+                clear: both;
+               
+            }
+        
+            .table-responsive{
+                margin: 5px;
+                margin-bottom: 100px;
+                width: 350px;
+                position: relative;
+                left: 145px;
+                font-size: 10px;
+         
+        }
+            #table-presenca{
+                font-size: 15px;
+            }
+        
+            #imagem{
+                max-width: 120px;
+                max-height: 120px;
+                max-width: auto;
+                max-height: auto;
+                clear: both;
+                position: relative;
+               left: 200px;
+               top: 10px;
+        
+            }
+            #campos{
+                position: relative;
+                right: 110px;
+            }
+            }
+            @media (min-width: 768px){
+                h1{
+                 font-size: 40px;
+                 text-align: left;
+                }
+                #button-finalizar{
+                   
+                    font-size: 12px;
+                    position: relative;
+                    right:80px ;
+                    bottom: 40px;
+    
+                    
+                }
+                .form-control{
+                    width: 210px;
+                    clear: both;
+                   
+                }
+            
+                .table-responsive{
+                    margin: 5px;
+                    margin-bottom: 100px;
+                    width: 450px;
+                    position: relative;
+                    left: 130px;
+                    bottom: 100px;
+                    font-size: 10px;
+
+             
+            }
+                #table-presenca{
+                    font-size: 15px;
+                }
+            
+                #imagem{
+                    max-width: 200px;
+                    max-height: 200px;
+                    max-width: auto;
+                    max-height: auto;
+                    clear: both;
+                    position: relative;
+                   left: 60px;
+                   top: 250px;
+            
+                }
+                #campos{
+                    position: relative;
+                    right: 70px;
+                }
+                .identificador{
+                    position: relative;
+                    right: 0px;
+                }
+                }
+                @media (min-width: 1024px){
+                    h1{
+                     font-size: 40px;
+                     text-align: left;
+                    }
+                    #button-finalizar{
+                       
+                        font-size: 12px;
+                        position: relative;
+                        right:80px ;
+                        bottom: 40px;
+        
+                        
+                    }
+                    .form-control{
+                        width: 300px;
+                        clear: both;
+                       
+                    }
+                
+                    .table-responsive{
+                        margin: 5px;
+                        margin-top: 200px;
+                        width: 500px;
+                        position: relative;
+                        left: 130px;
+                        bottom: 100px;
+                        font-size: 10px;
+    
+                 
+                }
+                    #table-presenca{
+                        font-size: 20px;
+                    }
+                
+                    #imagem{
+                        max-width: 200px;
+                        max-height: 200px;
+                        max-width: auto;
+                        max-height: auto;
+                        clear: both;
+                        position: relative;
+                       left: 60px;
+                       top: 250px;
+                
+                    }
+                    #campos{
+                        position: relative;
+                        right: 70px;
+                    }
+                    .identificador{
+                        position: relative;
+                        right: 0px;
+                    }
+                    }
+
+                    @media (min-width: 1440px){
+                        h1{
+                            font-size: 50px;
+                            text-align: left;
+                           }
+                           #button-finalizar{
+                              
+                               font-size: 20px;
+                               position: relative;
+                               right:80px ;
+                               bottom: 55px;
+               
+                               
+                           }
+                           .form-control{
+                               width: 400px;
+                               clear: both;
+                              
+                           }
+                       
+                           .table-responsive{
+                               margin: 5px;
+                               margin-top: 200px;
+                               width: 900px;
+                               position: relative;
+                               left: 130px;
+                               bottom: 100px;
+                               font-size: 10px;
+           
+                        
+                       }
+                           #table-presenca{
+                               font-size: 30px;
+                           }
+                       
+                           #imagem{
+                               max-width: 600px;
+                               max-height: 600px;
+                               max-width: auto;
+                               max-height: auto;
+                               clear: both;
+                               position: relative;
+                              left: 60px;
+                              top: 350px;
+                       
+                           }
+                           #campos{
+                               position: relative;
+                               right: 70px;
+                           }
+                           .identificador{
+                               position: relative;
+                               right: 0px;
+                           }
+                        }
+                        @media (min-width: 2560px){
+                            h1{
+                                font-size: 80px;
+                                text-align: left;
+                               }
+                               #button-finalizar{
+                                  
+                                   font-size: 40px;
+                                   position: relative;
+                                   left: 300px ;
+                                   bottom: 80px;
+                   
+                                   
+                               }
+                               .form-control{
+                                   width: 800px;
+                                   clear: both;
+                                  
+                               }
+                           
+                               .table-responsive{
+                                   margin: 5px;
+                                   margin-top: 200px;
+                                   width: 1400px;
+                                   position: relative;
+                                   left: 130px;
+                                   bottom: 100px;
+                                   font-size: 10px;
+               
+                            
+                           }
+                               #table-presenca{
+                                   font-size: 40px;
+                               }
+                           
+                               #imagem{
+                                   max-width: 900px;
+                                   max-height: 900px;
+                                   max-width: auto;
+                                   max-height: auto;
+                                   clear: both;
+                                   position: relative;
+                                   left: 60px;
+                                   top: 350px;
+                           
+                               }
+                               #campos{
+                                   position: relative;
+                                   right: 70px;
+                               }
+                               .identificador{
+                                   position: relative;
+                                   right: 0px;
+                               }
+                            }
+    
+
