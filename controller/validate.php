@@ -46,8 +46,11 @@ class Validate {
         else return false;
     }
 
+    // Regex para nomes e sobrenomes
     static $namePat = "/^[A-Z]{3,}( [A-Z]+)?$/";
+    // Regex para emails
     static $emailPat = "/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/";
+    // Regex para senhas
     static $senhaPat = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!-\/:-@\[-`{-~])(?=.{8,})/";
 
     public static function Login(array $ajax) {
