@@ -66,25 +66,25 @@
 
   <!-- CORPO DA TELA-->
   <body>
-    <div class="jumbotron">
+    <div class="jumbotron position-relative">
       <div class="container">
-        <h1 class="display-6">Relatório da Disciplina <br> Algoritmo e Estrutura de Dados</h1>
+        <h1 class="display-6">Relatório da Disciplina<br>Algoritmo e Estrutura de Dados</h1>
         <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="button-detalhado"><a href="detalhado.html">Relatório Detalhado</a></button>
       </div>
     </div>
     <!-- Nessa parte está mostrando o percentual de presença e os dias com mais e menos presença-->
-    <div class="disciplina">
+    <div class="container">
       <form>
         <div class="row">
-          <div class="col">
+          <div class="col-12 col-sm-4 my-2">
             <label for="inputpercentual"><b>Percentual de Presença</b></label>
             <input type="number" class="form-control" placeholder="78%" id="disabledInput" disabled>
           </div>
-          <div class="col">
+          <div class="col-12 col-sm-4 my-2">
             <label for="inputpresenca"><b>Dia com maior Presença</b></label>
             <input type="number" class="form-control" placeholder="14/02" id="disabledInput" disabled>
           </div>
-          <div class="col">
+          <div class="col-12 col-sm-4 my-2">
             <label for="inputausencia"><b>Dia com maior Ausência</b></label>
             <input type="number" class="form-control" placeholder="25/09" id="disabledInput" disabled>
           </div>
@@ -92,79 +92,83 @@
       </form>
 
       <!-- Nessa parte são duas tabelas, uma com as 10 pessoas que mais faltaram e outra com as que mais estiveram presente-->
-        <div class="table-responsive">
-          <table class="table table-striped" id="table-ausencia">
-            <thead>
-              <tr>
-                <th scope="col"><b>Top 10 Ausências</b></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Maria Paula Da Silva</td>
-              </tr>
-              <tr>
-                <td>João Pereira</td>
-              </tr>
-              <tr>
-                <td>Marcos dos santos</td>
-              </tr>
-              <tr>
-                <td>Antonio Carambolas</td>
-              </tr>
-              <tr>
-                <td>Paulo da silva</td>
-              </tr>
-              <tr>
-                <td>Lucas Oliveira</td>
-              </tr>
-              <tr>
-                <td>Ana catarina</td>
-              </tr>
-              <tr>
-                <td>Rita ritalina</td>
-              </tr>
-              <tr>
-                <td>Cansei de inventar nomes</td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="table table-striped" id="table-presenca">
-            <thead>
-              <tr>
-                <th scope="col"><b>Top 10 Presenças</b></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Maria Paula Da Silva</td>
-              </tr>
-              <tr>
-                <td>João Pereira</td>
-              </tr>
-              <tr>
-                <td>Marcos dos santos</td>
-              </tr>
-              <tr>
-                <td>Antonio Carambolas</td>
-              </tr>
-              <tr>
-                <td>Paulo da silva</td>
-              </tr>
-              <tr>
-                <td>Lucas Oliveira</td>
-              </tr>
-              <tr>
-                <td>Ana catarina</td>
-              </tr>
-              <tr>
-                <td>Rita ritalina</td>
-              </tr>
-              <tr>
-                <td>Cansei de inventar nomes</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <table class="table table-striped" id="table-ausencia">
+              <thead>
+                <tr>
+                  <th scope="col"><b>Top 10 Ausências</b></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Maria Paula Da Silva</td>
+                </tr>
+                <tr>
+                  <td>João Pereira</td>
+                </tr>
+                <tr>
+                  <td>Marcos dos santos</td>
+                </tr>
+                <tr>
+                  <td>Antonio Carambolas</td>
+                </tr>
+                <tr>
+                  <td>Paulo da silva</td>
+                </tr>
+                <tr>
+                  <td>Lucas Oliveira</td>
+                </tr>
+                <tr>
+                  <td>Ana catarina</td>
+                </tr>
+                <tr>
+                  <td>Rita ritalina</td>
+                </tr>
+                <tr>
+                  <td>Cansei de inventar nomes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-12 col-sm-6">
+            <table class="table table-striped" id="table-presenca">
+              <thead>
+                <tr>
+                  <th scope="col"><b>Top 10 Presenças</b></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Maria Paula Da Silva</td>
+                </tr>
+                <tr>
+                  <td>João Pereira</td>
+                </tr>
+                <tr>
+                  <td>Marcos dos santos</td>
+                </tr>
+                <tr>
+                  <td>Antonio Carambolas</td>
+                </tr>
+                <tr>
+                  <td>Paulo da silva</td>
+                </tr>
+                <tr>
+                  <td>Lucas Oliveira</td>
+                </tr>
+                <tr>
+                  <td>Ana catarina</td>
+                </tr>
+                <tr>
+                  <td>Rita ritalina</td>
+                </tr>
+                <tr>
+                  <td>Cansei de inventar nomes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
     </div>
 

@@ -67,44 +67,48 @@
   <!-- CORPO DA TELA-->
   <body>
     <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-6">Meu Perfil</h1>
-          <p id="frase"><b>"Ser professor te possibilita ter a certeza de que todos os dias você mudará positivamente a vida de alguém"</p>
+      <div class="container">
+        <h1 class="display-6">Meu Perfil</h1>
+        <p id="frase"><b>"Ser professor te possibilita ter a certeza de que todos os dias você mudará positivamente a vida de alguém"</p>
+      </div>
+    </div>
+    <div class="container" style="max-width: 720px">
+      <div class="row">
+        <div class="col position-relative">
+          <div class="position-sticky" style="top: 64px">
+            <img src="img/user.png" width="170" height="170" class="d-inline-block align-top" alt="" id="user">
+            <h1 id = "PerfilProf">Professor</h1>
+          </div>
         </div>
+          
+        <form id="formulario" class="col-12 col-sm-8">
+          <div class="form-group">
+              <label for="formGroupExampleInput2">Nome</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Professor" disabled>
+          </div>
+          <div class="form-group">
+              <label for="formGroupExampleInput2">Sobrenome</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Pitagoras" disabled>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Endereço de email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="professor@gmail.com" disabled>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*************" disabled>
+          </div>
+          <div class="form-group">
+              <label for="formGroupExampleInput2">CPF</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="985.565.255-85" disabled>
+          </div>
+          <div class="form-group">
+              <label for="formGroupExampleInput2">Código Professor</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="J48CD4178ED8" disabled>
+          </div>
+          <button type="submit" class="btn btn-primary" id="editar" >Editar</button>
+        </form>
       </div>
-    <div class="conteudo">
-      <div class="perfil">
-        <img src="img/user.png" width="170" height="170" class="d-inline-block align-top" alt="" id="user">
-        <h1 id = "PerfilProf">Professor</h1>
-      </div>
-        
-        <form id="formulario">
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Nome</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Professor" disabled>
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Sobrenome</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Pitagoras" disabled>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Endereço de email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="professor@gmail.com" disabled>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Senha</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*************" disabled>
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">CPF</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="985.565.255-85" disabled>
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Código Professor</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="J48CD4178ED8" disabled>
-            </div>
-            <button type="submit" class="btn btn-primary" id="editar" >Editar</button>
-          </form>
     </div>
   </body>
 
