@@ -14,17 +14,19 @@
 
     <!-- Estilos customizados para esse template -->
     <link href="css/login.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
   </head>
 
   <body>
     <!-- Um formulário onde o usuario irá colocar email e senha para acessar sua conta -->
-    <form class="form-signin">
+    <form class="form-signin" id="formLoginAluno">
       <div class="text-center mb-4">
         <img class="mb-4" src="img/logo.png" alt="" width="140" height="100">
         <h1 class="h3 mb-3 font-weight-normal">Acessar</h1>
         <p>Seja bem vindo ao Sistema de Chamadas da Faculdade Pitágoras Raja Gabáglia.</br> Para acessar, é só fazer login abaixo!</p>
       </div>
-
+      <div id="alert" class="container"></div>
       <div class="form-label-group">
         <input type="email" id="inputEmail" class="form-control" placeholder="Endereço de email" required autofocus>
         <label for="inputEmail">Endereço de email</label>
@@ -46,7 +48,12 @@
     </form>
   </body>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+  <script src="js/principalAluno.js"></script>
 </html>
