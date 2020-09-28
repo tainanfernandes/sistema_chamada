@@ -103,7 +103,7 @@
           </div>
           <div id="<?php echo str_replace(" ", "", $dado["NOMEDISCIPLINA"]); ?>" class="collapse" aria-labelledby="headingOne" data-parent="#turmas-collapse">
             <div class="card-body buttons-disciplina">
-              <div>
+              <div class="dados-turma">
 
                     <b>Curso: </b><?php echo $dado["NOMECURSO"]; ?></br>
                     <b>Dia: </b><?php echo $dado["DIASEMANA"]; ?></br>
@@ -121,57 +121,6 @@
           </div>
         </div>
         <?php } ?>
-
-<!--
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-              <h5 class="mb-0">
-                Sistemas Operacionais
-              </h5>
-            </button>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#turmas-collapse">
-            <div class="card-body buttons-disciplina">
-              <div>
-                <b>Curso:</b> Ciência da Computação</br>
-                <b>Dia:</b> Terça-feira</br>
-                <b>Turno:</b> Manhã</br>
-                <b>Código Turma:</b> 56556651521</br>
-                <b>Observações:</b> Turma sem preparação básica</br>
-                <b>STATUS:</b> Chamada Fechada </br>
-              </div>
-              <div class="materia-btn">
-                <a class="btn btn-outline-dark my-2 my-sm-0 button-presenca" href="./marcarpresenca.html">Marcar Presença</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-              <h5 class="mb-0">
-                Rede de Computadores
-              </h5>
-            </button>
-          </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#turmas-collapse">
-          <div class="card-body buttons-disciplina">
-            <div>
-              <b>Curso:</b> Ciência da Computação</br>
-              <b>Dia:</b> Sexta-feira</br>
-              <b>Turno:</b> Noite</br>
-              <b>Código Turma:</b> 9886789</br>
-              <b>Observações:</b> Turma Repetindo a máteria  </br>
-              <b>STATUS:</b> Chamada em Aberto </br>
-            </div>
-            <div class="materia-btn">
-                <a class="btn btn-outline-dark my-2 my-sm-0 button-presenca" href="./marcarpresenca.html">Marcar Presença</a>
-            </div>
-          </div>
-        </div>
-      </div>-->
     </div>
   </body>
 

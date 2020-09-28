@@ -19,16 +19,31 @@ h2{
     align-items: flex-end;
     flex-wrap: wrap;
 }
-.button-chamada{
-    float: right;
-}
-.button-presenca{
+.materia-btn{
     position: relative;
     float: right;
-    left: 600px;
-    top:10px;
+    left: 45%;
 }
 a{
     color: orange;
 }
+@media (max-width: 1199px) {
+    .materia-btn{
+        left: 30%;
+        
+    }
+ }
+ 
+@media (max-width: 991px) {
+   .materia-btn{
+       left: 15%;
 
+   }
+}
+@media (max-width: 767px) {
+    .materia-btn{
+        left: 0;
+        top: 5px;
+    }
+ }
+ 
