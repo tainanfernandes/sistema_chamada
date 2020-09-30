@@ -111,8 +111,6 @@
                     <b>Código Turma: </b><?php echo $dado["IDCURSO"];?> </br>
                     <b>Observações: </b><?php echo "FALTA SABER DE ONDE VEM"; ?></br>
                     <b>STATUS: </b><?php echo "FALTA SABER DE ONDE VEM"; ?></br>
-                
-                 
               </div>
               <div class="materia-btn">
                 <a class="btn btn-outline-dark my-2 my-sm-0 button-presenca" href="./marcarpresenca.html">Marcar Presença</a>
