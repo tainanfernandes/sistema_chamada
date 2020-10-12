@@ -1,3 +1,9 @@
+<?php
+require_once "controller/mysqli_connect.php";
+require_once "controller/querys.php";
+require_once "controller/principalprof.php";
+
+?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -67,8 +73,6 @@
 <!-- CORPO DA TELA-->
 
 <body>
-    <!-- conexão com o banco de dados -->
-
 
     <!-- Principal jumbotron, para a principal mensagem de marketing ou call to action -->
     <div class="jumbotron">
@@ -80,41 +84,60 @@
     </div>
 
     <!-- Nesse parte, será listada para o professor todas as suas turmas e as principais informações sobre elas em forma de acordeão -->
+
     <div class="container" id='myClasses'>
         <h2>Minhas Turmas</h2>
 
+        <!-- Conexão com banco e criação accordion -->
         <div class="accordion" id="turmas-collapse">
-            <div class="card">
-                <div class="card-header" id="healing1"><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                        <h5 class="mb-0">Rede de Computadores</h5>
-                    </button></div>
-                <div class="collapse card-body buttons-disciplina" id="collapse1" aria-labelledby="healing1" data-parent="#turmas-collapse">
-                    <div><b>Curso: </b>
-                        <spam>Ciência da Computação</spam><br><b>Dia: </b>
-                        <spam>Segunda-feira</spam><br><b>Turno: </b>
-                        <spam>Noite</spam><br><b>Código da Turma: </b>
-                        <spam>8237462387</spam><br><b>Observações: </b>
-                        <spam>Essa turma contém alunos do 1 ao 9 periodo</spam><br>
+            <?php
+            $query = $sqlPrincipalProfAccordion;
+            $result = mysqli_query($mysqli, $query) or die(mysqli_error());
+            $myClasses = [];
+            
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $myClasses[] = $row;
+                }
+            }
+            ?>
+            
+            <?php foreach ($myClasses as $chave=>$classes) : ?>
+                <div class="card">
+                    <div class="card-header">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?=$chave?>" aria-expanded="true" aria-controls="collapse<?=$chave?>">
+                            <h5 class="mb-0"><?= $classes["NMDISCIPLINA"] ?></h5>
+                        </button></div>
+                    <div class="collapse card-body buttons-disciplina" id="collapse<?=$chave?>" data-parent="#turmas-collapse">
+                        <div><b>Curso: </b><?= $classes["NMCURSO"] ?>
+                            <br><b>Dia: </b><?= $classes["DIA"] ?>
+                            <br><b>Turno: </b><?= $classes["TURNO"] ?>
+                            <br><b>Código da Turma: </b><?= $classes["PIN"] ?>
+                            <br><b>Observações: </b><?= $classes["OBSERVACAO"] ?>
+                            <br>
+                        </div>
+                        <div class="materia-btn"><a class="btn btn-outline-dark my-2 my-sm-0 button-relatorio" href="./disciplina.html">Relatório</a><a class="btn btn-outline-dark my-2 my-sm-0 button-chamada" href="./abrirpresenca.html">Chamada</a></div>
                     </div>
-                    <div class="materia-btn"><a class="btn btn-outline-dark my-2 my-sm-0 button-relatorio" href="./disciplina.html">Relatório</a><a class="btn btn-outline-dark my-2 my-sm-0 button-chamada" href="./abrirpresenca.html">Chamada</a></div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="healing2"><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                        <h5 class="mb-0">Rede de Computadores</h5>
-                    </button></div>
-                <div class="collapse card-body buttons-disciplina" id="collapse2" aria-labelledby="healing2" data-parent="#turmas-collapse">
-                    <div><b>Curso: </b>
-                        <spam>Ciência da Computação</spam><br><b>Dia: </b>
-                        <spam>Segunda-feira</spam><br><b>Turno: </b>
-                        <spam>Noite</spam><br><b>Código da Turma: </b>
-                        <spam>8237462387</spam><br><b>Observações: </b>
-                        <spam>Essa turma contém alunos do 1 ao 9 periodo</spam><br>
-                    </div>
-                    <div class="materia-btn"><a class="btn btn-outline-dark my-2 my-sm-0 button-relatorio" href="./disciplina.html">Relatório</a><a class="btn btn-outline-dark my-2 my-sm-0 button-chamada" href="./abrirpresenca.html">Chamada</a></div>
-                </div>
-            </div>
+            <?php endforeach ?>
         </div>
+
+        <!-- Criação da paginação -->
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Próximo</a>
+                </li>
+            </ul>
+        </nav>
     </div>
     </div>
     </div>
@@ -134,4 +157,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </html>
-
