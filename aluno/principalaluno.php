@@ -87,7 +87,7 @@
       <div class="accordion" id="turmas-collapse">
                 <?php
                   $consulta = query_materias_aluno($id);
-                  $result = mysqli_query($mysqli, $consulta) or die (msysqli_error());
+                  $result = mysqli_query($mysqli, $consulta) or die (mysqli_error());
                   $row = mysqli_num_rows($result);
 
                     while($dado = $result->fetch_array()){ 
