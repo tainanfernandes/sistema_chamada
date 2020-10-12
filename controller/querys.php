@@ -1,5 +1,5 @@
 <?php
-require_once '../controller/mysqli_connect.php';
+// require_once '../controller/mysqli_connect.php';
 
 function query_materias_aluno($id)
 {
