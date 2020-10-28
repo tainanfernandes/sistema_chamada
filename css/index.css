@@ -34,7 +34,7 @@
     background-size: contain;
     height: 2em;
     width: 2em;
-    
+
     margin-right: 0.5em
 }
 
@@ -42,7 +42,19 @@
     overflow: hidden;
 }
 
+.navbar, #footer-a{
+    font-size: 10px;
+}
+
+@media (min-width: 576px) {
+    .navbar, #footer-a{
+        font-size: 12px;
+    }
+}
 @media (min-width: 992px) {
+    .navbar, #footer-a{
+        font-size: 14px;
+    }
     #user-controls {
         width: fit-content;
         margin-left: auto;
@@ -53,4 +65,9 @@
     #user-controls-perfil > span:nth-child(2) {
         margin-left: 0.5em
     }
+}
+
+.row-vertical {
+    margin-top: -15px;
+    margin-bottom: -15px;
 }
