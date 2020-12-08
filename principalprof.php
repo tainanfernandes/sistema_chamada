@@ -82,19 +82,32 @@ require_once "controller/principalprof.php";
             </p>
         </div>
     </div>
-
     <!-- Nesse parte, será listada para o professor todas as suas turmas e as principais informações sobre elas em forma de acordeão -->
-
     <div class="container" id='myClasses'>
         <h2>Minhas Turmas</h2>
-
-        <!-- Conexão com banco e criação accordion -->
         <div class="accordion" id="turmas-collapse">
             <?php
+            // Criação da paginação junto com a exibiçãod os dados
             $query = $sqlPrincipalProfAccordion;
-            $result = mysqli_query($mysqli, $query) or die(mysqli_error());
+            $page = $_GET['page'];
+
+            if (!$page) {
+                $currentPage = 1;
+            } else {
+                $currentPage = $page;
+            }
+
+            $numDataForPage = '5';
+            $start = $currentPage - 1;
+            $start = $start * $numDataForPage;
+
+            $result = mysqli_query($mysqli, "$query LIMIT $start,$numDataForPage") or die(mysqli_error());
+            $todos = mysqli_query($mysqli, $query);
+
+            $totalRows = mysqli_num_rows($todos);
+            $totalPages = ceil($totalRows / $numDataForPage);
+
             $myClasses = [];
-            
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $myClasses[] = $row;
@@ -102,13 +115,13 @@ require_once "controller/principalprof.php";
             }
             ?>
             
-            <?php foreach ($myClasses as $chave=>$classes) : ?>
+            <?php foreach ($myClasses as $key => $classes) : ?>
                 <div class="card">
                     <div class="card-header">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?=$chave?>" aria-expanded="true" aria-controls="collapse<?=$chave?>">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?= $key ?>" aria-expanded="true" aria-controls="collapse<?= $key ?>">
                             <h5 class="mb-0"><?= $classes["NMDISCIPLINA"] ?></h5>
                         </button></div>
-                    <div class="collapse card-body buttons-disciplina" id="collapse<?=$chave?>" data-parent="#turmas-collapse">
+                    <div class="collapse card-body buttons-disciplina" id="collapse<?= $key ?>" data-parent="#turmas-collapse">
                         <div><b>Curso: </b><?= $classes["NMCURSO"] ?>
                             <br><b>Dia: </b><?= $classes["DIA"] ?>
                             <br><b>Turno: </b><?= $classes["TURNO"] ?>
@@ -120,26 +133,23 @@ require_once "controller/principalprof.php";
                     </div>
                 </div>
             <?php endforeach ?>
-        </div>
 
-        <!-- Criação da paginação -->
+        </div>
+        <!-- Criação dos cotões da paginação paginação -->
         <nav aria-label="...">
             <ul class="pagination">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active" aria-current="page">
-                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Próximo</a>
-                </li>
+                <?php
+                $previous = $currentPage - 1;
+                $next = $currentPage + 1;
+                if ($currentPage > 1) {
+                    echo "<li class='page-item'><a class='page-link' href='?page=$previous'>Anterior</a></li>";
+                }
+                if ($currentPage < $totalPages) {
+                    echo "<li class='page-item'><a class='page-link' href='?page=$next' >Próximo</a></li>";
+                }
+                ?>
             </ul>
         </nav>
-    </div>
-    </div>
     </div>
 </body>
 
